@@ -9,10 +9,9 @@ Implement a solution with a following scenario:
 2. There is an API that is developed by another team. The API provides bank transactions which include amount transferred and date
 
 3. Things to consider :
-    a. In this task there is no need to develop the API developed by another team
-    b. How to design your application so that it is testable?
-    c. If the application must be deployed to a server in remote location, how would you do it?
-
+   a. In this task there is no need to develop the API developed by another team
+   b. How to design your application so that it is testable?
+   c. If the application must be deployed to a server in remote location, how would you do it?
 
 #### Solutions
 
@@ -37,8 +36,25 @@ Implement a solution with a following scenario:
 #### How to use the eBanking application
 
 1. Log in using these credentials
-    - email : demo@demo.com
-    - password : demoP@ssW0rd123
+   - email : demo@demo.com
+   - password : demoP@ssW0rd123
 2. You can check your cumulative balance to the top right
 3. You can check all your previous transaction in the screen and you can also filter them by providing a filtering criteria
 4. Log out of your account
+
+---
+
+#### Technologies Used
+
+Javascript frameworks and libraries
+
+- **ReactJS** ( Library for building user interfaces )
+- **ViteJS** ( Front-end build tool )
+- **TailwindCSS** ( Utility based styling framework )
+- **Axios** ( Promise based HTTP client )
+- **JSON-Server** ( Fake API for testing )
+
+React Libraries used
+
+- **React Router Dom** ( handles routing within the application )
+- **React Hot Toast** ( Lightweight notifications )
