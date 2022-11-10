@@ -1,0 +1,12 @@
+{
+  "users": [],
+  "transactions": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "amount": 100,
+      "date": "2019-01-01",
+      "type": "deposit"
+    }
+  ]
+}
