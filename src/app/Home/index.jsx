@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import NavBar from "../../Components/Shared/Navbar";
 import { getUserData } from "../../services/userServices";
+import Dashboard from "../Dashboard";
 
 function Home() {
   const [user, setUser] = useState(null);
@@ -30,7 +31,7 @@ function Home() {
   return (
     <div className="w-screen h-screen">
       <NavBar />
-      <div id="detail"></div>
+      <Dashboard user={user} transactions={data} />
     </div>
   );
 }

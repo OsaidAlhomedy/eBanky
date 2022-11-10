@@ -1,4 +1,5 @@
 import Axios from "axios";
+import toast from "react-hot-toast";
 
 const axios = Axios.create({
   baseURL: "http://localhost:3000",
@@ -23,18 +24,18 @@ axios.interceptors.response.use(
     console.log(error.response.status);
     switch (error.response.status) {
       case 401:
-        console.log("Unauthorized");
-        // localStorage.clear();
-        // window.location.href = "/";
+        toast("Please Login Again");
+        localStorage.clear();
+        window.location.href = "/";
         break;
       case 403:
-        console.log("Forbidden");
+        toast("You are not authorized to access the requested resource");
         break;
       case 404:
-        console.log("Not Found");
+        toast("The requested resource was not found");
         break;
       case 500:
-        console.log("Internal Server Error");
+        toast("Internal Server Error");
         break;
       default:
         break;

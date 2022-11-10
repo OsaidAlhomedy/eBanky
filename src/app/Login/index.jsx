@@ -34,16 +34,16 @@ function Login() {
   }, [user, token]);
 
   return (
-    <section className="grid w-screen">
+    <section className={`grid w-screen h-screen`}>
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <a
           href="#"
-          className="flex items-center text-3xl md:text-5xl mb-6 font-semibold text-gray-900"
+          className="flex items-center text-6xl md:text-6xl mb-6 font-semibold text-gray-900"
         >
-          Aseed eBanking
+          eBanky
         </a>
-        <div className="w-full bg-dark rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0">
-          <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
+        <div className="w-full bg-dark rounded-xl shadow md:mt-0 sm:max-w-md xl:p-0">
+          <div className="p-6 space-y-4 md:space-y-6 sm:p-10">
             <h1 className="text-xl text-center font-bold leading-tight tracking-tight text-white md:text-2xl">
               Sign in to your account
             </h1>

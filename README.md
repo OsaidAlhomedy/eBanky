@@ -36,10 +36,10 @@ Implement a solution with a following scenario:
 #### How to use the eBanking application
 
 1. Log in using these credentials
-   - email : demo@demo.com
-   - password : demoP@ssW0rd123
+   - email : aseed@demo.com
+   - password : 12345678
 2. You can check your cumulative balance to the top right
-3. You can check all your previous transaction in the screen and you can also filter them by providing a filtering criteria
+3. You can check all your previous transaction in the screen
 4. Log out of your account
 
 ---
@@ -58,3 +58,4 @@ React Libraries used
 
 - **React Router Dom** ( handles routing within the application )
 - **React Hot Toast** ( Lightweight notifications )
+- **React Hook Form** ( Lightweight flexible library for handling forms )

@@ -14,5 +14,5 @@ export const register = (data) => {
 
 //User Data
 export const getUserData = async () => {
-  return (await axios.get(`/400/transactions`)).data;
+  return (await axios.get(`/400/transactions?_sort=date&_order=desc`)).data;
 };
