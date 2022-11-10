@@ -1,9 +1,11 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ErrorPage from "./Components/Errors";
-import Home from "./app/Home";
-import Login from "./app/Login";
+import { NotFound, UnExpectedErrorPage } from "./Components/Errors";
+import Loading from "./Components/Shared/Loading";
+
+const Home = React.lazy(() => import("./app/Home"));
+const Login = React.lazy(() => import("./app/Login"));
 
 import "./index.css";
 
@@ -11,21 +13,23 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Login />,
-    errorElement: <ErrorPage />,
+    errorElement: <UnExpectedErrorPage />,
   },
   {
     path: "/home",
     element: <Home />,
-    errorElement: <ErrorPage />,
+    errorElement: <UnExpectedErrorPage />,
   },
-  // {
-  //   path: "*",
-  //   element: <ErrorPage />,
-  // },
+  {
+    path: "*",
+    element: <NotFound />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Suspense fallback={<Loading />}>
+      <RouterProvider router={router} />
+    </Suspense>
   </React.StrictMode>
 );
