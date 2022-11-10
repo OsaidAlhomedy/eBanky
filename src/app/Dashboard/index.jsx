@@ -19,7 +19,7 @@ function Dashboard({ user, transactions }) {
   return (
     <div className="w-screen h-fit flex justify-center overflow-x-hidden mb-14">
       <div className="w-full md:w-3/4 h-fit md:border-x-2 border-dark flex flex-col">
-        <div class="bg-dark">
+        <div className="bg-dark">
           <div className="text-white m-10">
             <p className="mt-5 text-xl">{user?.name}</p>
             <p className="mt-5 text-xl">
@@ -63,6 +63,7 @@ function Dashboard({ user, transactions }) {
                               ? "bg-green-400 border-b"
                               : "bg-red-400 border-b"
                           }
+                          key={transaction.id}
                         >
                           <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                             {transaction.amount}

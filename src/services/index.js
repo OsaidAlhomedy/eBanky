@@ -23,6 +23,9 @@ axios.interceptors.response.use(
   (error) => {
     console.log(error.response.status);
     switch (error.response.status) {
+      case 400:
+        toast.error("Email or password is incorrect");
+        break;
       case 401:
         toast("Please Login Again");
         localStorage.clear();

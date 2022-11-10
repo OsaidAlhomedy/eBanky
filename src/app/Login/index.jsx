@@ -70,12 +70,12 @@ function Login() {
                   })}
                 />
                 {errors.email?.type === "required" && (
-                  <span className="text-red-600 text-sm">
+                  <span className="text-red-600 text-xs">
                     Email address is required
                   </span>
                 )}
                 {errors.email?.type === "pattern" && (
-                  <span className="text-red-600 text-sm">
+                  <span className="text-red-600 text-xs">
                     Make sure you entered a valid email address
                   </span>
                 )}
@@ -96,12 +96,12 @@ function Login() {
                   {...register("password", { required: true, minLength: 8 })}
                 />
                 {errors.password?.type === "required" && (
-                  <span className="text-red-600 text-sm">
+                  <span className="text-red-600 text-xs">
                     Password is Required
                   </span>
                 )}
                 {errors.password?.type === "minLength" && (
-                  <span className="text-red-600 text-sm">
+                  <span className="text-red-600 text-xs">
                     Password length must be at least 8 characters
                   </span>
                 )}

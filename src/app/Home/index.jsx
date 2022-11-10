@@ -9,7 +9,6 @@ function Home() {
 
   const fetchUserData = async () => {
     const fetchedData = await getUserData();
-    console.log(fetchedData);
     setData(fetchedData);
   };
 

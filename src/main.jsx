@@ -28,10 +28,8 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <Suspense fallback={<Loading />}>
-      <RouterProvider router={router} />
-      <Toaster />
-    </Suspense>
-  </React.StrictMode>
+  <Suspense fallback={<Loading />}>
+    <RouterProvider router={router} />
+    <Toaster />
+  </Suspense>
 );
