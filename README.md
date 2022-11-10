@@ -29,7 +29,6 @@ Implement a solution with a following scenario:
 2. Navigate to the root directory then run `npm install`
 3. Execute `npm run server` which starts a fake API bundled within the application
 4. Execute `npm run dev` which will start the application on development server
-5. You can test the application using `npm run test`
 
 ---
 
